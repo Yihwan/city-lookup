@@ -34,11 +34,11 @@ function displayMatches(e) {
       `<span class="hl">${e.target.value}</span>`);
 
     return `
-      <li>
-        <span class="name">
-          ${cityName}, ${stateName}
-        </span>
-        <span class="population">${numberWithCommas(place.population)}</span>
+      <li class="list-item">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Special:Search/${place.city},_${place.state}">
+          <span class="name">${cityName}, ${stateName}</span>
+          <span class="population">${numberWithCommas(place.population)}</span>
+        </a>
       </li>
     `;
   }).join('');

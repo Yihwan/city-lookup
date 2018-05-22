@@ -44,7 +44,7 @@ input.search {
   position: relative;
   /*perspective:20px;*/
 }
-.suggestions li {
+.suggestions .list-item {
   background:white;
   list-style: none;
   border-bottom: 1px solid #D8D8D8;
@@ -52,16 +52,16 @@ input.search {
   margin:0;
   padding:20px;
   transition:background 0.2s;
-  display:flex;
-  justify-content:space-between;
+  /* display:flex;
+  justify-content:space-between; */
   text-transform: capitalize;
 }
 
-.suggestions li:nth-child(even) {
+.suggestions .list-item:nth-child(even) {
   transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
   background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
 }
-.suggestions li:nth-child(odd) {
+.suggestions .list-item:nth-child(odd) {
   transform: perspective(100px) rotateX(-3deg) translateY(3px);
   background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
 }
@@ -72,4 +72,11 @@ span.population {
 
 .hl {
   background: #21ce99;
+}
+
+.suggestions a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: space-between;
 }
